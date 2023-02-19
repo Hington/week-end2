@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+
+.texte{
+    color: #6870e0;
+    margin: 105px auto;
+    position: absolute;
+    letter-spacing: 8px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; 
+}
+
+.gauche{
+    animation: myAnimGauche 2s ease 0s infinite normal forwards;
+}
+.droit{
+    animation: myAnimDroit 2s ease 0s infinite normal forwards;
+}
+.centre{
+    animation: myAnimCentre 2s ease 0s infinite normal forwards;
+}
+
+.violet{
+    width: 10px;
+    height: 10px;
+    background-color: #6870e0;
+    border-radius: 50%;
+    animation: myAnimViolet 0.6s  infinite;
+    margin: 2px auto;
+}
+@keyframes myAnimViolet {
+	0% {
+		transform: scale(0);
+       opacity: 0.5;
+	}
+
+    50% {
+
+        opacity: 0.3;
+        
+	}
+
+    100% {
+		transform: scale(5);
+        opacity: 0;
+	}
+}
+
+.gri{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(39, 39, 39);
+    border-radius: 50%;
+    animation: myAnimGri 2s ease 0s infinite  none;
+}
+@keyframes myAnimGri {
+	0% {
+		transform: scale(0);
+	}
+	10% {
+		transform: scale(0.5);
+	}
+
+	20% {
+		transform: scale(1);
+	}
+
+    30% {
+		transform: scale(1.5);
+	} 
+
+    40% {
+		transform: scale(2);
+	}
+
+    50% {
+		transform: scale(2.5);
+	}
+    60% {
+		transform: scale(3);
+	}
+    70% {
+		transform: scale(3.5);
+	}
+    80% {
+		transform: scale(4);
+	}
+    90% {
+		transform: scale(4.5);
+	}
+    100% {
+		transform: scale(5);
+	}
+}
+
+@keyframes myAnimGauche {
+	0% {
+		transform: translateX(-100px);
+        opacity: 0;
+	}
+    
+	100% {
+		transform: translateX(0px);
+        opacity: 1;
+	}
+}
+@keyframes myAnimDroit {
+	0% {
+		transform: translateX(100px);
+        opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0px);
+        opacity: 1;
+	}
+}
+@keyframes myAnimCentre {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.deplacer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: myAnimDeplacer 3s backwards ease 0s infinite normal ;
+    /* transition-delay: 250s;
+    transition-property: transform; */
+}
+
+@keyframes myAnimDeplacer {
+	0% {
+		transform: translateY(0px);
+        transition-delay: -5s;
+	}
+	100% {
+		transform: translateY(80%);
+	}
+
+    
+}
